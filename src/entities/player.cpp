@@ -40,33 +40,33 @@ void Player::Animate(string animKey)
 
 //---------------------------------------------------
 
-void Player::Update(Inputs* inputs)
+void Player::Update()
 {
     // Uint32 ticks = SDL_GetTicks();
     // Uint32 seconds = ticks / 1000;
     // Uint32 spriteFrame = seconds % 3;//4;       
   
 
-    if (inputs->m_right == true)
-    {
-        m_posX += 0.01f;    
-        Animate("walk");
-    }
-    if (inputs->m_left == true)
-    {
-        m_posX -= 0.01f;
-        Animate("walk");
-    }
-    if (inputs->m_down == true)
-    {
-        m_posY += 0.01f; 
-        Animate("jump");
-    }
-    if (inputs->m_up == true)
-    {
-        m_posY -= 0.01f;
-        Animate("jump"); 
-    }
+    // if (Inputs::m_right == true)
+    // {
+    //     m_posX += 0.01f;    
+    //     Animate("walk");
+    // }
+    // if (Inputs::m_left == true)
+    // {
+    //     m_posX -= 0.01f;
+    //     Animate("walk");
+    // }
+    // if (Inputs::m_down == true)
+    // {
+    //     m_posY += 0.01f; 
+    //     Animate("jump");
+    // }
+    // if (Inputs::m_up == true)
+    // {
+    //     m_posY -= 0.01f;
+    //     Animate("jump"); 
+    // }
 
     Render();
 

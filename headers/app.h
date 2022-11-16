@@ -1,6 +1,5 @@
 #pragma once
 
-#include <SDL2/SDL.h>
 #include <stdio.h>
 #include <string>
 #include <iostream>
@@ -34,7 +33,7 @@ class Application
 
 		//new thread for window / gui
 		
-			std::thread m_window_thread(&InitializeWindow, m_inputMgr); 
+			std::thread m_window_thread(&InitializeWindow /* , , , etc... */); 
 			m_window_thread.join();
 	
 		}

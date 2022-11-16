@@ -4,7 +4,7 @@
 #include <ctime>
 
 
-    class Log{
+    class Log {
 
         public:  
 

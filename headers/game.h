@@ -25,9 +25,9 @@ class Game {
 
         static Inputs* inputs;
 
-        static void Update(Inputs* inputs);
+        static void Update();
 
-        Game(Inputs* inputs, GLuint TextureID[]);
+        Game(GLuint TextureID[]);
         ~Game();
 
 };

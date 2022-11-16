@@ -1,1 +1,1 @@
-mingw32-make.exe && ./project.exe
+mingw32-make.exe && ./opengl-engine.exe

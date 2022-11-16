@@ -1,5 +1,6 @@
 #include "../headers/window.h"
 
+using namespace glm;
 
 float highDPIscaleFactor = 1.0;
 bool isRunning = true,
@@ -13,10 +14,26 @@ GLFWwindow* window;
 
 
 GLuint TextureID[3];
-ImGuiIO io;
-ImVec4 clear_color;
+// ImGuiIO io;
+// ImVec4 clear_color;
+vec4 clear_color;
 
 
+void processInput(GLFWwindow *window)
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}
+
+
+// glfw: whenever the window size changed (by OS or user resize) this callback function executes
+// ---------------------------------------------------------------------------------------------
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    // make sure the viewport matches the new window dimensions; note that width and 
+    // height will be significantly larger than specified on retina displays.
+    glViewport(0, 0, width, height);
+}
  
 // void LaunchGui(const char* glsl_version, Inputs* inputs, SDL_Event event)
 // {
@@ -67,7 +84,7 @@ ImVec4 clear_color;
 
 //------------------------------------
 
-// void GuiPreUpdate(SDL_Event event)
+// void GuiPreUpdate()
 // {
 //    // ImGui_ImplSDL2_ProcessEvent(&event);
 //     glClear(GL_COLOR_BUFFER_BIT);
@@ -119,38 +136,38 @@ ImVec4 clear_color;
 //----------------------------------
 
 
-// void RenderGui()
-// {
-//     ImGui::Render();
-//     glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
-//     glMatrixMode(GL_PROJECTION);
-//     glOrtho(0, WIDTH, HEIGHT, 0, -1, 1);
-//     glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-//     //glClear(GL_COLOR_BUFFER_BIT);
-//     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-// }
+void RenderGui()
+{
+
+    //ImGui::Render();
+    clear_color = vec4(0.2f, 0.3f, 0.3f, 1.0f);
+    glViewport(0, 0, WIDTH, HEIGHT)/* (int)io.DisplaySize.x, (int)io.DisplaySize.y) */;
+    //glMatrixMode(GL_PROJECTION);
+    //glOrtho(0, WIDTH, HEIGHT, 0, -1, 1);
+    glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+    //glClear(GL_COLOR_BUFFER_BIT);
+    //ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+}
 
 //---------------------------------------------
 
 
-// bool CloseGui()
-// {
-//     ImGui_ImplOpenGL3_Shutdown();
-//     //ImGui_ImplSDL2_Shutdown();
-//     ImGui::DestroyContext();
+bool CloseGui()
+{
+    //ImGui_ImplOpenGL3_Shutdown();
+    //ImGui_ImplSDL2_Shutdown();
+    //ImGui::DestroyContext();
 
-//     Log::write("GUI exited");
+    Log::write("GUI exited");
 
-//     return false;
-// }
+    return false;
+}
 
 //-------------------------------------------------------------- Initialize SDL
 
 
-int InitializeWindow(Inputs* inputs)
+int InitializeWindow()
 {
-
-   // SDL_Window* window;
 
     if(!glfwInit()) 
     {
@@ -162,50 +179,50 @@ int InitializeWindow(Inputs* inputs)
 
         Log::write("window initialized");
         
-        glfwWindowHint(GLFW_DOUBLEBUFFER , 1);
+        glfwWindowHint(GLFW_DOUBLEBUFFER, 1);
         glfwWindowHint(GLFW_DEPTH_BITS, 24);
         glfwWindowHint(GLFW_STENCIL_BITS, 8);
 
         // adjust these values depending on the OpenGL supported by your GPU driver
         
-        std::string glsl_version = "";
-        #ifdef __APPLE__
-            // GL 3.2 + GLSL 150
-            glsl_version = "#version 150";
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-            // required on Mac OS
-            glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-        #elif __linux__
-            // GL 3.2 + GLSL 150
-            glsl_version = "#version 150";
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-        #elif _WIN32
-            // GL 3.0 + GLSL 130
-            glsl_version = "#version 130";
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
-        #endif
+        // std::string glsl_version = "";
+        // #ifdef __APPLE__
+        //     // GL 3.2 + GLSL 150
+        //     glsl_version = "#version 150";
+        //     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+        //     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+        //     // required on Mac OS
+        //     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+        // #elif __linux__
+        //     // GL 3.2 + GLSL 150
+        //     glsl_version = "#version 150";
+        //     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+        //     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+        // #elif _WIN32
+        //     // GL 3.0 + GLSL 130
+        //     glsl_version = "#version 130";
+        //     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+        //     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+        // #endif
 
-            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+        //     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        #ifdef _WIN32
-            // if it's a HighDPI monitor, try to scale everything
-            GLFWmonitor *monitor = glfwGetPrimaryMonitor();
-            float xscale, yscale;
-            glfwGetMonitorContentScale(monitor, &xscale, &yscale);
-            std::cout << "[INFO] Monitor scale: " << xscale << "x" << yscale << std::endl;
-            if (xscale > 1 || yscale > 1)
-            {
-                highDPIscaleFactor = xscale;
-                glfwWindowHint(GLFW_SCALE_TO_MONITOR, GLFW_TRUE);
-            }
-        #elif __APPLE__
-            // to prevent 1200x800 from becoming 2400x1600
-            // and some other weird resizings
-            glfwWindowHint(GLFW_COCOA_RETINA_FRAMEBUFFER, GLFW_FALSE);
-        #endif
+        // #ifdef _WIN32
+        //     // if it's a HighDPI monitor, try to scale everything
+        //     GLFWmonitor *monitor = glfwGetPrimaryMonitor();
+        //     float xscale, yscale;
+        //     glfwGetMonitorContentScale(monitor, &xscale, &yscale);
+        //     std::cout << "[INFO] Monitor scale: " << xscale << "x" << yscale << std::endl;
+        //     if (xscale > 1 || yscale > 1)
+        //     {
+        //         highDPIscaleFactor = xscale;
+        //         glfwWindowHint(GLFW_SCALE_TO_MONITOR, GLFW_TRUE);
+        //     }
+        // #elif __APPLE__
+        //     // to prevent 1200x800 from becoming 2400x1600
+        //     // and some other weird resizings
+        //     glfwWindowHint(GLFW_COCOA_RETINA_FRAMEBUFFER, GLFW_FALSE);
+        // #endif
 
         //------------------- create window
                 
@@ -218,74 +235,53 @@ int InitializeWindow(Inputs* inputs)
             }
 
             glfwMakeContextCurrent(window);
-    
-            //SDL_GL_SetSwapInterval(1); // Enable vsync
+     
+            gladLoadGL();
 
-            glEnable(GL_TEXTURE_2D);
-            glEnable(GL_BLEND);
-            glBlendEquation(GL_FUNC_ADD);
-           // glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-            glGenTextures(3, TextureID/* &m_inst */); 
-   
+            Log::write(glGetString(GL_VERSION));
 
-        //-----------main event stream
-
-           // SDL_Event event;
+           glEnable(GL_TEXTURE_2D);
+           glEnable(GL_BLEND);
+  
+           glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+           //glGenTextures(3, TextureID); 
+         
 
         //------------Init game
 
-          //  Game* game = new Game(inputs, TextureID);
+            Game* game = new Game(TextureID);
 
         //-------- Init GUI
 
             //LaunchGui(glsl_version, inputs, event);
 
-           // while (isRunning)
-            //{
-                // while (SDL_PollEvent(&event))
-                // {
-                //     bool res = inputs->pollInput(event, window);
+            glfwSetKeyCallback(window, Inputs::key_callback);
 
-                //     if (res == false)
-                //         isRunning = false;
 
-                //     GuiPreUpdate(event);
-                //     game->Update(inputs);
-                //     RenderGui();
-                //     //SDL_GL_SwapWindow(window);  
-                // }  
-           // }
+            while (!glfwWindowShouldClose(window))
+            {
 
-           while (!glfwWindowShouldClose(window))
-           {
+            //processInput(window);
 
             //render
-
+               // glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
                 glClear(GL_COLOR_BUFFER_BIT);
-
-            //swap front and back buffers
+        
+                //GuiPreUpdate();
+                game->Update();
+                RenderGui();
 
                 glfwSwapBuffers(window);
-
-            //poll for process events
-
                 glfwPollEvents();
 
-           }
+            }
 
 
     //Cleanup
 
-        //CloseGui();	
+        //CloseGui();
 
-       // SDL_DestroyWindow(window);
-        //SDL_GL_DeleteContext(context);
-
-        //SDL_Delay( 2000 );
-        IMG_Quit();
-        SDL_Quit();
-
-        //delete game;
+        delete game;
         delete window;   
         
         Log::write("window closed");

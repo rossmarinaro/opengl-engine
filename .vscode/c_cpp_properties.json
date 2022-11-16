@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:\\Program Files\\MinGW\\x86_64-w64-mingw32\\include",
-                "C:\\libs\\glew-2.2.0-win32\\glew-2.2.0\\include"
+                "C:\\libs\\glad\\include"
             ],
             "defines": [
                 "_DEBUG",

@@ -1,639 +1,612 @@
-audio initialized
-Time stamp: Thu Sep 15 11:40:46 2022
-
 window initialized
-Time stamp: Thu Sep 15 11:40:46 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
-rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
-
-Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
-
-64
-Time stamp: Thu Sep 15 11:40:47 2022
+4.3.0 - Build 20.19.15.5126
+Time stamp: Wed Nov 16 13:34:31 2022
 
-64
-Time stamp: Thu Sep 15 11:40:47 2022
-
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
-
-128
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
-128
-Time stamp: Thu Sep 15 11:40:47 2022
-
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:31 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:32 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 rgba enabled
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite instantiated
-Time stamp: Thu Sep 15 11:40:47 2022
+Time stamp: Wed Nov 16 13:34:33 2022
 
-GUI exited
-Time stamp: Thu Sep 15 11:40:50 2022
+Sprite instantiated
+Time stamp: Wed Nov 16 13:34:33 2022
 
 Sprite Destroyed
-Time stamp: Thu Sep 15 11:40:50 2022
-
-window initialized
-Time stamp: Fri Nov 11 20:16:54 2022
-
-window closed
-Time stamp: Fri Nov 11 20:22:26 2022
-
-Application terminated
-Time stamp: Fri Nov 11 20:22:26 2022
+Time stamp: Wed Nov 16 13:34:38 2022
 

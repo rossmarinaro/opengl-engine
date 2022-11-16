@@ -3,10 +3,13 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+
 #include "./renderer.h"
 #include "./inputs.h"
 
 #include "../vendors/nlohmann/json.hpp" 
+#include "./shader.h"
+#include <iostream>
 
 using string = std::string;
 using json = nlohmann::json;
@@ -17,10 +20,18 @@ namespace Entities {
 
 		public:  
 
+			Shader* m_shader;
+			
+		    unsigned int m_VBO, m_VAO, m_EBO, m_texture1, m_texture2;
+
+			unsigned char* m_image1;
+
 			bool m_isSpritesheet = false;
 			bool m_isAtlas = false;
 
-			int m_frames,
+			int m_frames, 
+				m_width,
+				m_height,
 				m_currentFrame;
 
 			float 
@@ -31,8 +42,6 @@ namespace Entities {
 				m_scaleX = 1,
 				m_scaleY = 1,
 				m_degrees = 0; 
-
-			SDL_Surface* m_texture;
 
 			std::int64_t 
 				m_currentFrameX,
@@ -61,11 +70,7 @@ namespace Entities {
 			}
 
 			Sprite(GLuint &id, float x, float y, const char* key[2]);
-			~Sprite()
-			{
-				SDL_FreeSurface(m_texture);
-				Log::write("Sprite Destroyed");
-			}
+		   ~Sprite();
 
 		private:
 
@@ -79,7 +84,7 @@ namespace Entities {
 
 		public:
 
-			void Update(Inputs* inputs);
+			void Update();
 			void Animate(string animKey);
 
 			Player(GLuint &id, float x, float y, const char* key[2]) : Sprite(id, x, y, key){};

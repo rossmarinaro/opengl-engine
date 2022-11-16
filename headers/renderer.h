@@ -1,14 +1,12 @@
-//#include <windows.h>
-// #include <string> 
-// #include <stdio.h>
 
-#include <SDL2/SDL_mixer.h>
-#include <SDL2/SDL_image.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+
+// #include <SDL2/SDL_mixer.h>
+// #include <SDL2/SDL_image.h>
 
 
-#define GLEW_STATIC
-#include <GL/glew.h>
-#include <GL/gl.h> 
+#include "../vendors/glad/include/glad/glad.h"
 
 #define _GLFW_WIN32
 #include <GLFW/glfw3.h>

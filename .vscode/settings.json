@@ -62,6 +62,7 @@
         "numbers": "cpp",
         "ranges": "cpp",
         "semaphore": "cpp",
-        "stop_token": "cpp"
+        "stop_token": "cpp",
+        "glad.h": "c"
     }
 }
