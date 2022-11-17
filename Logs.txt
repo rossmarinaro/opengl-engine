@@ -1,612 +1,618 @@
 window initialized
-Time stamp: Wed Nov 16 13:34:31 2022
+Time stamp: Thu Nov 17 12:44:26 2022
 
 4.3.0 - Build 20.19.15.5126
-Time stamp: Wed Nov 16 13:34:31 2022
+Time stamp: Thu Nov 17 12:44:26 2022
 
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:31 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:31 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:32 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:32 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
-rgba enabled
-Time stamp: Wed Nov 16 13:34:33 2022
-
-Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
-
 Sprite instantiated
-Time stamp: Wed Nov 16 13:34:33 2022
+Time stamp: Thu Nov 17 12:44:26 2022
 
 Sprite Destroyed
-Time stamp: Wed Nov 16 13:34:38 2022
+Time stamp: Thu Nov 17 12:44:28 2022
+
+window initialized
+Time stamp: Thu Nov 17 12:56:32 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 12:56:33 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 12:56:33 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 12:56:33 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 12:56:33 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 12:56:39 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 12:56:39 2022
+
+window initialized
+Time stamp: Thu Nov 17 12:58:04 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 12:58:04 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 12:58:04 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 12:58:04 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 12:58:04 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 12:58:12 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 12:58:12 2022
+
+window initialized
+Time stamp: Thu Nov 17 12:59:01 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 12:59:01 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 12:59:01 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 12:59:01 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 12:59:01 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 12:59:08 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 12:59:08 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:07:06 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:07:06 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:07:06 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:07:06 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:07:06 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:07:17 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:07:17 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:08:42 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:08:42 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:08:42 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:08:42 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:08:42 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:08:47 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:08:47 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:16:33 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:16:33 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:16:33 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:16:33 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:16:33 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:17:17 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:17:17 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:34:24 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:34:24 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:34:24 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:34:24 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:34:24 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:34:37 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:34:37 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:36:42 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:36:42 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:36:42 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:36:42 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:36:42 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:36:45 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:36:45 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:37:55 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:37:55 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:37:55 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:37:55 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:37:55 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:37:56 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:37:56 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:39:13 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:39:13 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:39:13 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:39:13 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:39:13 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:39:19 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:39:19 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:42:35 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:42:35 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:42:35 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:42:35 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:42:35 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:42:37 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:42:37 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:43:37 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:43:37 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:43:37 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:43:37 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:43:37 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:44:28 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:44:28 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:47:44 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:47:44 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:47:44 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:47:44 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:47:44 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:47:49 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:47:49 2022
+
+window initialized
+Time stamp: Thu Nov 17 15:56:48 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 15:56:48 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:56:48 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 15:56:48 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 15:56:48 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:57:02 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 15:57:02 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:01:55 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:01:55 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:01:55 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:01:55 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:01:55 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:01:59 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:01:59 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:06:35 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:06:35 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:06:35 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:06:35 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:06:35 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:06:37 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:06:37 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:13:19 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:13:20 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:13:20 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:13:20 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:13:20 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:15:38 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:15:38 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:15:38 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:15:38 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:15:38 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:15:41 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:15:41 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:16:27 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:16:27 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:16:27 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:16:27 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:16:29 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:18:45 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:18:46 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:18:46 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:18:46 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:18:48 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:19:59 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:19:59 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:19:59 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:19:59 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:20:01 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:21:05 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:21:05 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:21:05 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:21:05 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:22:03 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:28:43 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:28:43 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:28:44 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:28:44 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:28:50 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:32:49 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:32:49 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:32:49 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:32:49 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:32:52 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:33:33 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:33:34 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:33:34 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:33:34 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:33:37 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:36:24 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:36:25 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:36:25 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:40:39 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:40:39 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:40:39 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:40:39 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:40:51 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:43:46 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:43:46 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:43:46 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:43:46 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:43:55 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:46:19 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:46:19 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:46:19 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:46:19 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:47:12 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:51:56 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:51:56 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:51:56 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:51:56 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:51:59 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:54:17 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:54:17 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:54:17 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:54:17 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:54:36 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:54:51 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:54:51 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:54:51 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:54:51 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:54:57 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:56:04 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:56:04 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:56:04 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:56:04 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:56:33 2022
+
+window initialized
+Time stamp: Thu Nov 17 16:57:21 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Thu Nov 17 16:57:21 2022
+
+rgba enabled
+Time stamp: Thu Nov 17 16:57:21 2022
+
+Sprite instantiated
+Time stamp: Thu Nov 17 16:57:21 2022
+
+Sprite Destroyed
+Time stamp: Thu Nov 17 16:57:32 2022
 

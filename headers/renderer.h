@@ -1,10 +1,6 @@
 
- #include <stdio.h>
- #include <stdlib.h>
-
-// #include <SDL2/SDL_mixer.h>
-// #include <SDL2/SDL_image.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "../vendors/glad/include/glad/glad.h"
 
@@ -19,3 +15,5 @@
 // #else
 // #include <SDL_opengl.h>
 // #endif
+
+

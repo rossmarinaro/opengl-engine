@@ -1,4 +1,6 @@
+
 #include "../headers/window.h"
+
 
 using namespace glm;
 
@@ -13,17 +15,10 @@ static const int HEIGHT = 720;
 GLFWwindow* window; 
 
 
-GLuint TextureID[3];
+unsigned int TextureID[3];
 // ImGuiIO io;
 // ImVec4 clear_color;
 vec4 clear_color;
-
-
-void processInput(GLFWwindow *window)
-{
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
 
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -235,16 +230,21 @@ int InitializeWindow()
             }
 
             glfwMakeContextCurrent(window);
+            glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
      
-            gladLoadGL();
+            if (!gladLoadGL() || !gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+            {
+                Log::write("Failed to initialize GLAD");
+                return -1;
+            }
 
             Log::write(glGetString(GL_VERSION));
 
-           glEnable(GL_TEXTURE_2D);
-           glEnable(GL_BLEND);
+            glEnable(GL_TEXTURE_2D);
+            glEnable(GL_BLEND);
   
-           glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-           //glGenTextures(3, TextureID); 
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+           // glGenTextures(3, TextureID); 
          
 
         //------------Init game
@@ -261,7 +261,7 @@ int InitializeWindow()
             while (!glfwWindowShouldClose(window))
             {
 
-            //processInput(window);
+                Inputs::processInput(window);
 
             //render
                // glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -277,7 +277,7 @@ int InitializeWindow()
             }
 
 
-    //Cleanup
+    //-------------Cleanup
 
         //CloseGui();
 

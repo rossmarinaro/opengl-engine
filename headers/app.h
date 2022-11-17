@@ -11,6 +11,7 @@
 #include "./inputs.h"
 
 
+
 /****** Application *****/
 
 class Application 
@@ -30,7 +31,8 @@ class Application
 
 			//m_audioMgr = new Audio();
 			m_inputMgr = new Inputs();
-
+		
+	
 		//new thread for window / gui
 		
 			std::thread m_window_thread(&InitializeWindow /* , , , etc... */); 

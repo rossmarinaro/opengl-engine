@@ -16,13 +16,25 @@ using json = nlohmann::json;
 
 namespace Entities {
 
+	class Image {
+		
+		public:
+
+			Shader* m_shader;
+			
+			unsigned int m_VBO, m_VAO, m_EBO, m_texture1, m_texture2;
+
+			Image(float x, float y, const char* key[2]);
+			~Image();
+	};
+
 	class Sprite {
 
 		public:  
 
 			Shader* m_shader;
 			
-		    unsigned int m_VBO, m_VAO, m_EBO, m_texture1, m_texture2;
+		    unsigned int m_texture1, m_texture2;
 
 			unsigned char* m_image1;
 
@@ -52,8 +64,7 @@ namespace Entities {
 			json m_resourceData;
 
 			void Render();
-			void SetColor(Uint8 red, Uint8 green, Uint8 blue);
-			void SetAlpha(Uint8 alpha);
+
 			void SetScale(float scaleX, float scaleY)
 			{
 				m_scaleX = scaleX;

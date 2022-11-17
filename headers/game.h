@@ -19,7 +19,7 @@ class Game {
    
 
     public: 
-    //static Player* m_player;
+
         AssetManager* m_assMgr;
         MapManager* m_mapMgr;
 
@@ -27,7 +27,7 @@ class Game {
 
         static void Update();
 
-        Game(GLuint TextureID[]);
+        Game(unsigned int TextureID[]);
         ~Game();
 
 };
