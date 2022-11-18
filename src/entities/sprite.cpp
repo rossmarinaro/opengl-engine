@@ -8,6 +8,10 @@
 
 using namespace Entities;
 
+unsigned int currentTextures;
+GLuint* textures;
+
+
 void Sprite::Render()
 { 
     if (m_texture1 != NULL)
@@ -56,13 +60,15 @@ void Sprite::_SetSubTexture()
 
 //-----------------------------------------------------------
 
-Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
+Sprite::Sprite(unsigned int &id, float x, float y, const char* key[2])
 {
+
+
     //---texture
     
     unsigned int texture1;
-    glGenTextures(1, /* &id */&texture1);
-    glActiveTexture(GL_TEXTURE0);
+    
+    glGenTextures(id, /* &id */ &texture1 );
     glBindTexture(GL_TEXTURE_2D, /* id */ texture1);
 
 
@@ -128,12 +134,18 @@ Sprite::Sprite(GLuint &id, float x, float y, const char* key[2])
 
         SetPosition(-0.5, -0.5);
  
-        m_texture1 = texture1; //id
+        m_texture1 = texture1; //id;
        
         Log::write("Sprite instantiated");
 
         stbi_image_free(m_image1);
     }
-    
+
 }
 
+Sprite::~Sprite()
+{
+
+    Log::write("Sprite Destroyed");
+
+}

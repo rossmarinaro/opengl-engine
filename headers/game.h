@@ -27,7 +27,7 @@ class Game {
 
         static void Update();
 
-        Game(unsigned int TextureID[]);
+        Game(GLuint TextureID[]);
         ~Game();
 
 };

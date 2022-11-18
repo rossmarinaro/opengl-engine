@@ -9,7 +9,7 @@ static std::vector<Sprite*> currentEntities;
 static std::vector<std::vector<TileSprite*>> map;
 
 
-Game::Game(unsigned int textures[]) 
+Game::Game(GLuint textures[]) 
 { 
 
     //init base systems
@@ -19,7 +19,7 @@ Game::Game(unsigned int textures[])
 
     //init entities
 
-      // menu = new Sprite(textures[0], 0, 0, m_assMgr->menu);
+       menu = new Sprite(textures[1], 0, 0, m_assMgr->menu);
        player = new Player(textures[2], -100.5, 0, m_assMgr->swanky_velvet);
        player->SetScale(0.325f, 0.75f); 
         //player = new Sprite(textures[1], 0, 0, m_assMgr->swanky_velvet);
@@ -27,7 +27,7 @@ Game::Game(unsigned int textures[])
     //add entities to update queue
 
        // map.push_back(m_mapMgr->m_tilesprites);
-      //  currentEntities.push_back(menu);
+        currentEntities.push_back(menu);
         currentEntities.push_back(player);
 
 }

@@ -15,7 +15,7 @@ static const int HEIGHT = 720;
 GLFWwindow* window; 
 
 
-unsigned int TextureID[3];
+GLuint TextureID[3];
 // ImGuiIO io;
 // ImVec4 clear_color;
 vec4 clear_color;
@@ -242,10 +242,10 @@ int InitializeWindow()
 
             glEnable(GL_TEXTURE_2D);
             glEnable(GL_BLEND);
-  
+
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-           // glGenTextures(3, TextureID); 
-         
+            glGenTextures(3, TextureID ); 
+
 
         //------------Init game
 

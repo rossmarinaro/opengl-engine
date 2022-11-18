@@ -8,7 +8,7 @@
 #include "./inputs.h"
 
 #include "../vendors/nlohmann/json.hpp" 
-#include "./shader.h"
+
 #include <iostream>
 
 using string = std::string;
@@ -16,23 +16,10 @@ using json = nlohmann::json;
 
 namespace Entities {
 
-	class Image {
-		
-		public:
-
-			Shader* m_shader;
-			
-			unsigned int m_VBO, m_VAO, m_EBO, m_texture1, m_texture2;
-
-			Image(float x, float y, const char* key[2]);
-			~Image();
-	};
 
 	class Sprite {
 
 		public:  
-
-			Shader* m_shader;
 			
 		    unsigned int m_texture1, m_texture2;
 
