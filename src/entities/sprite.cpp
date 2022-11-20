@@ -68,7 +68,7 @@ Sprite::Sprite(unsigned int &id, float x, float y, const char* key[2])
     
     unsigned int texture1;
     
-    glGenTextures(id, /* &id */ &texture1 );
+    glGenTextures(1, /* &id */ &texture1 );
     glBindTexture(GL_TEXTURE_2D, /* id */ texture1);
 
 

@@ -1264,3 +1264,24 @@ Time stamp: Fri Nov 18 17:03:46 2022
 Sprite Destroyed
 Time stamp: Fri Nov 18 17:03:46 2022
 
+window initialized
+Time stamp: Fri Nov 18 18:20:12 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Nov 18 18:20:12 2022
+
+Sprite instantiated
+Time stamp: Fri Nov 18 18:20:12 2022
+
+rgba enabled
+Time stamp: Fri Nov 18 18:20:12 2022
+
+Sprite instantiated
+Time stamp: Fri Nov 18 18:20:12 2022
+
+Sprite Destroyed
+Time stamp: Fri Nov 18 18:20:17 2022
+
+Sprite Destroyed
+Time stamp: Fri Nov 18 18:20:17 2022
+
