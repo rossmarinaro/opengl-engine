@@ -3,9 +3,22 @@
 
 #OBJS specifies which files to compile as part of the project
 
-OBJS = vendors/glad/src/glad.c src/main.cpp src/window.cpp src/entities/sprite.cpp src/entities/player.cpp src/entities/map.cpp src/game.cpp src/inputs.cpp #vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_glfw.cpp vendors/imgui/imgui_impl_opengl3.cpp #src/audio.cpp
+OBJS = \
+	vendors/glad/src/glad.c \
+	src/main.cpp \
+	src/window.cpp \
+	src/inputs.cpp \
+	src/game.cpp \
+	src/entities/map.cpp \
+	src/entities/sprite.cpp \
+	src/entities/player.cpp 
+
 
 #CC specifies which compiler we're using
+# others: 	src/stb_image.cpp 
+
+#vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_glfw.cpp vendors/imgui/imgui_impl_opengl3.cpp #src/audio.cpp
+
 
 CC = g++ -std=c++17 #-D GLEW_STATIC
 

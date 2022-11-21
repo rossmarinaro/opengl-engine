@@ -20,13 +20,16 @@ namespace Entities {
 	class Sprite {
 
 		public:  
+
+			static unsigned int m_textureSlots;
 			
-		    unsigned int m_texture1, m_texture2;
+		    unsigned int m_id, m_texSlot;
 
-			unsigned char* m_image1;
+			unsigned char* m_image;
 
-			bool m_isSpritesheet = false;
-			bool m_isAtlas = false;
+			bool m_isSpritesheet = false,
+				 m_isAtlas = false,
+				 m_isLoaded = false;
 
 			int m_frames, 
 				m_width,
@@ -67,7 +70,7 @@ namespace Entities {
 				m_posY = y;//-y * 0.001;
 			}
 
-			Sprite(GLuint &id, float x, float y, const char* key[2]);
+			Sprite(GLuint id, float x, float y, const char* key[2]);
 		   ~Sprite();
 
 		private:
@@ -85,7 +88,7 @@ namespace Entities {
 			void Update();
 			void Animate(string animKey);
 
-			Player(GLuint &id, float x, float y, const char* key[2]) : Sprite(id, x, y, key){};
+			Player(GLuint id, float x, float y, const char* key[2]) : Sprite(id, x, y, key){};
 			~Player() = default;
 	};
 
@@ -104,7 +107,7 @@ namespace Entities {
 		public:
 			
 			TileSprite (
-				GLuint &id, 
+				GLuint id, 
 				//std::tuple<int, int> tileType, 
 				float posX, 
 				float posY, 

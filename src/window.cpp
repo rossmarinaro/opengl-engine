@@ -2,6 +2,7 @@
 #include "../headers/window.h"
 
 
+
 using namespace glm;
 
 float highDPIscaleFactor = 1.0;
@@ -244,7 +245,7 @@ int InitializeWindow()
             glEnable(GL_BLEND);
 
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-          //  glGenTextures(3, TextureID ); 
+            //glGenTextures(3, TextureID); 
 
 
         //------------Init game

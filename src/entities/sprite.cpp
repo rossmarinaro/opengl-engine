@@ -2,19 +2,19 @@
 #include "../../headers/entity.h"
 #include "../../headers/resources/spritesheets.h"
 
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb/stb_image.h"
 
 
 using namespace Entities;
 
-unsigned int currentTextures;
-GLuint* textures;
+unsigned int Sprite::m_textureSlots = 0;
 
 
 void Sprite::Render()
 { 
-    if (m_texture1 != NULL)
+    if (m_isLoaded)
     {
 
         if (m_isSpritesheet == true)
@@ -24,11 +24,11 @@ void Sprite::Render()
             m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
         }
 
-        if (m_isAtlas == true || m_isSpritesheet == true)
-            _SetSubTexture();
+        //if (m_isAtlas == true || m_isSpritesheet == true)
+        //    this->_SetSubTexture();
 
-       //render surface as open gl texture (works)
-    
+       //render open gl texture 
+
         glBegin(GL_QUADS);
             glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
             glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY, 0);
@@ -36,7 +36,8 @@ void Sprite::Render()
             glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
         glEnd();
 
-    
+        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_width, m_height, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
+        glGenerateMipmap(GL_TEXTURE_2D);
     }
 
 }
@@ -49,7 +50,7 @@ void Sprite::_SetSubTexture()
     glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
     glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
 
-    glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image1);
+    glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
     //glTexSubImage2D(GL_TEXTURE_2D, 0, m_currentFrameWidth, m_currentFrameHeight, m_width, m_height, m_renderMode, GL_UNSIGNED_BYTE, m_image1);
     
     glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
@@ -60,17 +61,18 @@ void Sprite::_SetSubTexture()
 
 //-----------------------------------------------------------
 
-Sprite::Sprite(unsigned int &id, float x, float y, const char* key[2])
+Sprite::Sprite(GLuint id, float x, float y, const char* key[2])
 {
+    m_texSlot = m_textureSlots == 0 ? GL_TEXTURE0 : GL_TEXTURE1;
+    m_id = id;
 
+    glGenTextures(1, &m_id);
 
-    //---texture
-    
-    unsigned int texture1;
-    
-    glGenTextures(1, /* &id */ &texture1 );
-    glBindTexture(GL_TEXTURE_2D, /* id */ texture1);
+    //glActiveTexture(GL_TEXTURE0 + m_textureSlots);
 
+    glBindTexture(GL_TEXTURE_2D, m_id);
+
+    m_textureSlots++;
 
     int ok, w, h, channels;
 
@@ -90,8 +92,11 @@ Sprite::Sprite(unsigned int &id, float x, float y, const char* key[2])
 
     //---------------- set the texture wrapping parameters
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     
     // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
     // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
@@ -118,34 +123,47 @@ Sprite::Sprite(unsigned int &id, float x, float y, const char* key[2])
         m_isSpritesheet = true;
     }  
 
-    m_image1 = stbi_load(key[1], &m_width, &m_height, &channels, 0);  
+    m_image = stbi_load(key[1], &m_width, &m_height, &channels, 0);  
 
-    if (!m_image1) 
+    if (!m_image) 
         Log::write("Error loading sprite."); 
     else 
     { 
-
-    //render image as opengl texture
-
-        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_width, m_height, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image1);
-        glGenerateMipmap(GL_TEXTURE_2D);
 
     //Get image dimensions / position
 
         SetPosition(-0.5, -0.5);
  
-        m_texture1 = texture1; //id;
+        m_isLoaded = true;
        
         Log::write("Sprite instantiated");
 
-        stbi_image_free(m_image1);
+        //glUniform1i(glGetUniformLocation(shaderProgram, "image"), 0);
     }
 
 }
 
 Sprite::~Sprite()
 {
-
+    
+    stbi_image_free(m_image); 
     Log::write("Sprite Destroyed");
 
 }
+
+
+/* 
+timer:
+
+double prevTime = glfwGetTime();
+
+while...
+double currTime = glfwGetTime();
+if (currTime - prevTime >= 1/ 60)
+{
+    do something...
+    prevTime = currTime
+}
+
+
+ */
