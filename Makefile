@@ -14,11 +14,18 @@ OBJS = \
 	src/entities/player.cpp 
 
 
+
 #CC specifies which compiler we're using
 # others: 	src/stb_image.cpp 
 
-#vendors/imgui/imgui.cpp vendors/imgui/imgui_demo.cpp vendors/imgui/imgui_widgets.cpp vendors/imgui/imgui_tables.cpp vendors/imgui/imgui_draw.cpp vendors/imgui/imgui_impl_glfw.cpp vendors/imgui/imgui_impl_opengl3.cpp #src/audio.cpp
-
+#src/audio.cpp
+# vendors/imgui/imgui.cpp
+# vendors/imgui/imgui_demo.cpp
+# vendors/imgui/imgui_widgets.cpp
+# vendors/imgui/imgui_tables.cpp
+# vendors/imgui/imgui_draw.cpp
+# vendors/imgui/imgui_impl_glfw.cpp
+# vendors/imgui/imgui_impl_opengl3.cpp
 
 CC = g++ -std=c++17 #-D GLEW_STATIC
 

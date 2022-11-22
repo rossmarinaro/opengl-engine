@@ -9,25 +9,28 @@
 
 using namespace Entities;
 
-unsigned int Sprite::m_textureSlots = 0;
-
 
 void Sprite::Render()
 { 
     if (m_isLoaded)
     {
-
-        if (m_isSpritesheet == true)
+    
+        //animation iteration
+        
+        if (m_isSpritesheet == true) 
         {
             if (m_currentFrame > m_frames)
                 m_currentFrame = 0;
             m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
         }
 
-        //if (m_isAtlas == true || m_isSpritesheet == true)
-        //    this->_SetSubTexture();
+        glPixelStorei(GL_UNPACK_ROW_LENGTH, m_width);
+        glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
+        glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
 
-       //render open gl texture 
+        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
+        
+    //render open gl texture 
 
         glBegin(GL_QUADS);
             glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
@@ -36,43 +39,29 @@ void Sprite::Render()
             glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
         glEnd();
 
-        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_width, m_height, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
+        glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+        glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
+        glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
+        
         glGenerateMipmap(GL_TEXTURE_2D);
     }
 
 }
 
+
 //-----------------------------------------------------------
 
-void Sprite::_SetSubTexture()
-{
-    glPixelStorei(GL_UNPACK_ROW_LENGTH, m_width);
-    glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
-    glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
 
-    glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
-    //glTexSubImage2D(GL_TEXTURE_2D, 0, m_currentFrameWidth, m_currentFrameHeight, m_width, m_height, m_renderMode, GL_UNSIGNED_BYTE, m_image1);
+Sprite::Sprite(float x, float y, const char* key[2])
+{
+
+    unsigned int id = m_id;
     
-    glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
-    glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
-    glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
-
-}
-
-//-----------------------------------------------------------
-
-Sprite::Sprite(GLuint id, float x, float y, const char* key[2])
-{
-    m_texSlot = m_textureSlots == 0 ? GL_TEXTURE0 : GL_TEXTURE1;
     m_id = id;
 
     glGenTextures(1, &m_id);
 
-    //glActiveTexture(GL_TEXTURE0 + m_textureSlots);
-
     glBindTexture(GL_TEXTURE_2D, m_id);
-
-    m_textureSlots++;
 
     int ok, w, h, channels;
 
@@ -122,11 +111,19 @@ Sprite::Sprite(GLuint id, float x, float y, const char* key[2])
         m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
         m_isSpritesheet = true;
     }  
+    else
+    {
+        m_currentFrameWidth = m_width; 
+        m_currentFrameHeight = m_height;
+        m_currentFrameX = 0;
+        m_currentFrameY = 0; 
+    }
 
     m_image = stbi_load(key[1], &m_width, &m_height, &channels, 0);  
 
     if (!m_image) 
         Log::write("Error loading sprite."); 
+        
     else 
     { 
 
@@ -138,14 +135,13 @@ Sprite::Sprite(GLuint id, float x, float y, const char* key[2])
        
         Log::write("Sprite instantiated");
 
-        //glUniform1i(glGetUniformLocation(shaderProgram, "image"), 0);
     }
 
 }
 
 Sprite::~Sprite()
 {
-    
+
     stbi_image_free(m_image); 
     Log::write("Sprite Destroyed");
 

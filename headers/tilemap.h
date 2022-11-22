@@ -34,9 +34,14 @@ class MapManager {
         std::vector<Entities::TileSprite*> m_tilesprites;
         std::unordered_map<char, Entities::TileSprite*> m_textureMap;
 
-        MapManager(GLuint &textureID, GLuint &textureID2, AssetManager* assets);
-        ~MapManager(){
+        MapManager(AssetManager &assets);
+        ~MapManager()
+        {
             delete[] m_mapTiles;
+
+            for (auto &sprite : m_tilesprites)
+                delete sprite;
+
             m_textureMap.clear();
         };
 

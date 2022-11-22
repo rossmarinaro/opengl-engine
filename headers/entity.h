@@ -20,10 +20,8 @@ namespace Entities {
 	class Sprite {
 
 		public:  
-
-			static unsigned int m_textureSlots;
 			
-		    unsigned int m_id, m_texSlot;
+		    unsigned int m_id;
 
 			unsigned char* m_image;
 
@@ -70,14 +68,13 @@ namespace Entities {
 				m_posY = y;//-y * 0.001;
 			}
 
-			Sprite(GLuint id, float x, float y, const char* key[2]);
+			Sprite(float x, float y, const char* key[2]);
 		   ~Sprite();
 
 		private:
 
 			int m_renderMode;
-			GLuint m_inst;
-			void _SetSubTexture();
+		
 	};
 
 
@@ -88,7 +85,10 @@ namespace Entities {
 			void Update();
 			void Animate(string animKey);
 
-			Player(GLuint id, float x, float y, const char* key[2]) : Sprite(id, x, y, key){};
+			Player(float x, float y, const char* key[2]) : Sprite(x, y, key)
+			{
+			//	this->SetScale(0.325f, 0.75f);
+			};
 			~Player() = default;
 	};
 
@@ -107,7 +107,6 @@ namespace Entities {
 		public:
 			
 			TileSprite (
-				GLuint id, 
 				//std::tuple<int, int> tileType, 
 				float posX, 
 				float posY, 
@@ -115,9 +114,9 @@ namespace Entities {
 				int64_t frameY, 
 				const char* key[2]
 			) 
-			:Sprite(id, posX, posY, key)
+			:Sprite(posX, posY, key)
 			{
-				SetScale(0.1f, 0.1f);
+				 SetScale(0.1f, 0.1f);
 
 				m_currentFrameX = frameX; 
 				m_currentFrameY = frameY;

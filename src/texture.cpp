@@ -9,13 +9,16 @@ void Texture::Render()
 { 
     if (m_isLoaded)
     {
-        glActiveTexture(m_id);
-        glBindTexture(GL_TEXTURE_2D, m_texture);
+        //glActiveTexture(m_id);
+        glBindTexture(GL_TEXTURE_2D, m_id);
         m_shader->use();
         glBindVertexArray(m_VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
+    //render Texture as opengl texture
 
+        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_width, m_height, 0, m_renderMode, GL_UNSIGNED_BYTE, m_bytes);
+        glGenerateMipmap(GL_TEXTURE_2D);
         //--------
 
         // glActiveTexture(GL_TEXTURE0);
@@ -44,7 +47,7 @@ void Texture::Render()
 }
 
 
-Texture::Texture(GLuint id, GLuint texture, float x, float y, const char* key[2])
+Texture::Texture(float x, float y, const char* key[2])
 {
 
     m_shader = new Shader("assets/glsl/vert.shader", "assets/glsl/frag.shader"); 
@@ -93,11 +96,14 @@ Texture::Texture(GLuint id, GLuint texture, float x, float y, const char* key[2]
 
     //---texture
     
-    m_texture = texture;
+    
+    unsigned int id = m_id;
+    
     m_id = id;
-    //glGenTextures(1, /* &id */&m_texture);
+
+    glGenTextures(1, &m_id);
     //glActiveTexture(id);
-    glBindTexture(GL_TEXTURE_2D, m_texture);
+    glBindTexture(GL_TEXTURE_2D, m_id);
 
     glBindVertexArray(m_VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
@@ -124,30 +130,6 @@ Texture::Texture(GLuint id, GLuint texture, float x, float y, const char* key[2]
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
-
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-    // //--------------- set texture filtering parameters
-
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    //const char* spritesheet = Assets::Spritesheets::GetResource(key[0]); 
-
-    // if (spritesheet != 0) //if spritesheet
-    // {
-    //     std::ifstream data(spritesheet);
-    //     m_resourceData = json::parse(data);
-    //     m_frames = m_resourceData["frames"].size() - 1;
-    //     m_currentFrame = 0;
-    //     m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
-    //     m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
-    //     m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
-    //     m_isSpritesheet = true;
-    // }  
 
     m_bytes = stbi_load(key[1], &m_width, &m_height, &channels, 0);  
 
@@ -156,16 +138,18 @@ Texture::Texture(GLuint id, GLuint texture, float x, float y, const char* key[2]
     else 
     { 
 
-    //render Texture as opengl texture
+    // //render Texture as opengl texture
 
-        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_width, m_height, 0, m_renderMode, GL_UNSIGNED_BYTE, m_bytes);
-        glGenerateMipmap(GL_TEXTURE_2D);
-       
+        // glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_width, m_height, 0, m_renderMode, GL_UNSIGNED_BYTE, m_bytes);
+        // glGenerateMipmap(GL_TEXTURE_2D);
+        // glUniform1i(glGetUniformLocation(m_shader, "image"), 0);
+
         Log::write("Sprite instantiated");
 
         m_isLoaded = true;
 
-        stbi_image_free(m_bytes);
+
+       // stbi_image_free(m_bytes);
     }
 
 
@@ -236,7 +220,7 @@ Texture::Texture(GLuint id, GLuint texture, float x, float y, const char* key[2]
 
 Texture::~Texture()
 {
-
+ stbi_image_free(m_bytes);
     Log::write("Sprite Destroyed");
     glDeleteVertexArrays(1, &m_VAO);
     glDeleteBuffers(1, &m_VBO);

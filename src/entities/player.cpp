@@ -49,26 +49,29 @@ void Player::Update()
 
     if (Inputs::m_right == true)
     {
-        m_posX += 0.01f;    
+        this->m_posX += 0.01f;    
         Animate("walk");
     }
     if (Inputs::m_left == true)
     {
-        m_posX -= 0.01f;
+        this->m_posX -= 0.01f;
         Animate("walk");
     }
     if (Inputs::m_down == true)
     {
-        m_posY += 0.01f; 
+        this->m_posY += 0.01f; 
         Animate("jump");
     }
     if (Inputs::m_up == true)
     {
-        m_posY -= 0.01f;
+        this->m_posY -= 0.01f;
         Animate("jump"); 
     }
 
-    Render();
+        
+  
+    this->Render();
 
 }
+
 
