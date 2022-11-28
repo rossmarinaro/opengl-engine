@@ -1,6 +1,11 @@
 
 #include "../headers/window.h"
 
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "../headers/shader.h"
+
 float highDPIscaleFactor = 1.0;
 bool isRunning = true,
      show_demo_window = true,
@@ -17,6 +22,20 @@ GLFWwindow* window;
 glm::vec4 clear_color;
 
 
+double _time;
+
+
+static const GLchar* vertShader_transform = "assets/glsl/transform/vert.shader";
+static const GLchar* fragShader_transform = "assets/glsl/transform/frag.shader";
+
+static GLfloat vertices[] = {
+/*   Positions          Colors */
+     0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+     0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
+};
+
+
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -25,6 +44,27 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // height will be significantly larger than specified on retina displays.
     WIDTH = width;
     HEIGHT = height;
+
+    Shader* shader = new Shader(vertices, vertShader_transform, fragShader_transform); //common_get_shader_program(vertex_shader_source, fragment_shader_source);
+
+
+    /* THIS is just a dummy transform. */
+    GLfloat transform[] = {
+        0.0f, 0.0f, 0.0f, 0.0f,
+        0.0f, 0.0f, 0.0f, 0.0f,
+        0.0f, 0.0f, 1.0f, 0.0f,
+        0.0f, 0.0f, 0.0f, 1.0f,
+    };
+
+    transform[0] = 2.0f * WIDTH;
+    transform[5] = 2.0f * HEIGHT;
+
+
+    shader->transform(transform);
+
+    delete shader;
+
+    
 }
  
 void LaunchGui(/* const char* glsl_version, Inputs* inputs */)
@@ -256,15 +296,19 @@ int InitializeWindow()
                 Inputs::processInput(window);
            
             //render
+            
                 glClear(GL_COLOR_BUFFER_BIT);
         
                 //GuiPreUpdate();
                 game->Update();
                 //RenderGui();
+            
                 clear_color = glm::vec4(0.2f, 0.3f, 0.3f, 1.0f);
+
                 glViewport(0, 0, WIDTH, HEIGHT);
                 glMatrixMode(GL_PROJECTION);
-                glOrtho(0, WIDTH, HEIGHT, 0, 0, 0);     
+                glLoadIdentity(); 
+
                 glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
                 glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
                 glfwSwapBuffers(window);

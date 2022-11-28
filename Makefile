@@ -16,7 +16,7 @@ OBJS = \
 
 
 #CC specifies which compiler we're using
-# others: 	src/stb_image.cpp 
+# others: src/test_3d_triangle.cpp
 
 #src/audio.cpp
 # vendors/imgui/imgui.cpp

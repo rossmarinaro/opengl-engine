@@ -20,7 +20,7 @@
 	{   
 		//Log::write(CoinFlip() == true ? "coin flipped true" : "coin flipped false");
 		
-		Application* app = new Application();      
+		Application* app = new Application;      
 		delete app;
 		return 0;
 		

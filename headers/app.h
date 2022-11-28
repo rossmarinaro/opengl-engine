@@ -30,7 +30,7 @@ class Application
 		{
 
 			//m_audioMgr = new Audio();
-			m_inputMgr = new Inputs();
+			m_inputMgr = new Inputs;
 		
 	
 		//new thread for window / gui

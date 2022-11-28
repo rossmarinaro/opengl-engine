@@ -21,7 +21,7 @@ class Texture {
         bool m_isLoaded = false;
         unsigned int 
                      m_VBO, 
-                     m_VAO,     
+                     m_VAO,
                      m_EBO;
         GLuint m_id;
         int m_renderMode;
