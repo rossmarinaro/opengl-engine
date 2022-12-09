@@ -6,6 +6,7 @@
 
 #include "./renderer.h"
 #include "./inputs.h"
+#include "./resources/manager.h"
 
 #include "../vendors/nlohmann/json.hpp" 
 
@@ -20,7 +21,7 @@ namespace Entities {
 	class Sprite {
 
 		public:  
-			
+
 		    unsigned int m_id;
 
 			unsigned char* m_image;
@@ -68,12 +69,24 @@ namespace Entities {
 				m_posY = y;//-y * 0.001;
 			}
 
-			Sprite(float x, float y, const char* key[2]);
+			void DrawSprite(
+				Texture2D* &texture, 
+				glm::vec2 position, 
+				glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, 
+				glm::vec3 color = glm::vec3(1.0f)
+			);
+
+
+			Sprite(/* float x, float y, const char* key[2] */Shader &shader);
 		   ~Sprite();
 
 		private:
 
 			int m_renderMode;
+
+      		Shader shader; 
+        	unsigned int quadVAO;
+        	void initRenderData();
 		
 	};
 
@@ -85,10 +98,10 @@ namespace Entities {
 			void Update();
 			void Animate(string animKey);
 
-			Player(float x, float y, const char* key[2]) : Sprite(x, y, key)
-			{
-			//	this->SetScale(0.325f, 0.75f);
-			};
+			// Player(float x, float y, const char* key[2]) : Sprite(x, y, key)
+			// {
+			// //	this->SetScale(0.325f, 0.75f);
+			// };
 			~Player() = default;
 	};
 
@@ -106,26 +119,26 @@ namespace Entities {
 
 		public:
 			
-			TileSprite (
-				//std::tuple<int, int> tileType, 
-				float posX, 
-				float posY, 
-				int64_t frameX, 
-				int64_t frameY, 
-				const char* key[2]
-			) 
-			:Sprite(posX, posY, key)
-			{
-				 SetScale(0.1f, 0.1f);
+			// TileSprite (
+			// 	//std::tuple<int, int> tileType, 
+			// 	float posX, 
+			// 	float posY, 
+			// 	int64_t frameX, 
+			// 	int64_t frameY, 
+			// 	const char* key[2]
+			// ) 
+			// :Sprite(posX, posY, key)
+			// {
+			// 	SetScale(0.1f, 0.1f);
 
-				m_currentFrameX = frameX; 
-				m_currentFrameY = frameY;
-                m_currentFrameWidth = m_tileWidth; 
-                m_currentFrameHeight = m_tileHeight; 
-				m_isAtlas = true;
+			// 	m_currentFrameX = frameX; 
+			// 	m_currentFrameY = frameY;
+            //     m_currentFrameWidth = m_tileWidth; 
+            //     m_currentFrameHeight = m_tileHeight; 
+			// 	m_isAtlas = true;
 		        
       
-			}
+			// }
 			~TileSprite() = default;
 	};
 }

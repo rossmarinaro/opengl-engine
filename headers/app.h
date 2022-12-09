@@ -35,7 +35,7 @@ class Application
 	
 		//new thread for window / gui
 		
-			std::thread m_window_thread(&InitializeWindow /* , , , etc... */); 
+			std::thread m_window_thread(&Window::InitializeWindow /* , , , etc... */); 
 			m_window_thread.join();
 	
 		}

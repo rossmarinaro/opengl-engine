@@ -1,7 +1,7 @@
-#pragma once
+#ifndef WINDOW_H
+#define WINDOW_H
 
 #include "glm/glm.hpp"
-
 
 
 #include "./renderer.h"
@@ -13,6 +13,27 @@
 // #include "../vendors/imgui/imgui_impl_glfw.h"
 // #include "../vendors/imgui/imgui_impl_opengl3.h"
 
-int InitializeWindow();
+
+class Window {
+
+    public:
+
+        static int width,
+                   height;
+
+        static GLFWwindow* m_window; 
+
+        static int InitializeWindow();
+        static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+     
+        Window& get()
+        {
+            return *this;
+        }
+
+    
+};
+
+#endif
 
 

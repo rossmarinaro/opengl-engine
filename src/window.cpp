@@ -11,41 +11,37 @@ bool isRunning = true,
      show_demo_window = true,
      show_another_window = false;
 
-int WIDTH = 640,//1280; 
-    HEIGHT = 640;//720; 
-
-GLFWwindow* window; 
-
+GLFWwindow* Window::m_window; 
+int Window::width = 640, 
+    Window::height = 640;
+//1280, 720; 
 
 //ImGuiIO io;
 // ImVec4 clear_color;
 glm::vec4 clear_color;
 
 
-double _time;
+// static const GLchar* vertShader_transform = "assets/glsl/transform/vert.shader";
+// static const GLchar* fragShader_transform = "assets/glsl/transform/frag.shader";
 
-
-static const GLchar* vertShader_transform = "assets/glsl/transform/vert.shader";
-static const GLchar* fragShader_transform = "assets/glsl/transform/frag.shader";
-
-static GLfloat vertices[] = {
-/*   Positions          Colors */
-     0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
-    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-     0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
-};
+// static GLfloat vertices[] = {
+// /*   Positions          Colors */
+//      0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+//     -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+//      0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
+// };
 
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void Window::framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     // make sure the viewport matches the new window dimensions; note that width and 
     // height will be significantly larger than specified on retina displays.
-    WIDTH = width;
-    HEIGHT = height;
+    Window::width = width;
+    Window::height = height;
 
-    Shader* shader = new Shader(vertices, vertShader_transform, fragShader_transform); //common_get_shader_program(vertex_shader_source, fragment_shader_source);
+    //Shader* shader = new Shader(vertices, vertShader_transform, fragShader_transform); 
 
 
     /* THIS is just a dummy transform. */
@@ -56,13 +52,13 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
         0.0f, 0.0f, 0.0f, 1.0f,
     };
 
-    transform[0] = 2.0f * WIDTH;
-    transform[5] = 2.0f * HEIGHT;
+    transform[0] = 2.0f * Window::width;
+    transform[5] = 2.0f * Window::height;
 
 
-    shader->transform(transform);
+   //shader->transform(transform);
 
-    delete shader;
+   // delete shader;
 
     
 }
@@ -195,7 +191,7 @@ bool CloseGui()
 //-------------------------------------------------------------- Initialize SDL
 
 
-int InitializeWindow()
+int Window::InitializeWindow()
 {
 
     if(!glfwInit()) 
@@ -255,15 +251,15 @@ int InitializeWindow()
 
         //------------------- create window
                 
-            window = glfwCreateWindow(WIDTH, HEIGHT, "Spaghet about it!", NULL, NULL);
+            Window::m_window = glfwCreateWindow(Window::width, Window::height, "Spaghet about it!", NULL, NULL);
 
-            if (!window)
+            if (!Window::m_window)
             {
                 glfwTerminate();
                 return -1;
             }
 
-            glfwMakeContextCurrent(window);
+            glfwMakeContextCurrent(Window::m_window);
      
             if (!gladLoadGL() || !gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
             {
@@ -275,28 +271,28 @@ int InitializeWindow()
 
             glEnable(GL_TEXTURE_2D);
             glEnable(GL_BLEND);
-
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+            //framebuffer_size_callback(window, WIDTH, HEIGHT);
 
         //------------Init game
 
-            Game* game = new Game();
+            Game* game = new Game();      glm::mat4 projection = glm::ortho(0.0f, 800.0f, 600.0f, 0.0f, -1.0f, 1.0f); 
 
         //-------- Init GUI
 
             //LaunchGui();
 
-            glfwSetKeyCallback(window, Inputs::key_callback);
+            glfwSetKeyCallback(Window::m_window, Inputs::key_callback);
 
 
-            while (!glfwWindowShouldClose(window))
+            while (!glfwWindowShouldClose(Window::m_window))
             {
 
-                Inputs::processInput(window);
+                Inputs::processInput(Window::m_window);
            
             //render
-            
+
                 glClear(GL_COLOR_BUFFER_BIT);
         
                 //GuiPreUpdate();
@@ -305,13 +301,13 @@ int InitializeWindow()
             
                 clear_color = glm::vec4(0.2f, 0.3f, 0.3f, 1.0f);
 
-                glViewport(0, 0, WIDTH, HEIGHT);
+                glViewport(0, 0, Window::width, Window::height);
                 glMatrixMode(GL_PROJECTION);
                 glLoadIdentity(); 
 
-                glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+                glfwSetFramebufferSizeCallback(Window::m_window, framebuffer_size_callback);   
                 glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-                glfwSwapBuffers(window);
+                glfwSwapBuffers(Window::m_window);
                 glfwPollEvents();
 
             }
@@ -322,7 +318,7 @@ int InitializeWindow()
         //CloseGui();
 
         delete game;
-        delete window;   
+        delete Window::m_window;   
         
         Log::write("window closed");
 

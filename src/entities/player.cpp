@@ -47,26 +47,26 @@ void Player::Update()
     // Uint32 spriteFrame = seconds % 3;//4;       
   
 
-    if (Inputs::m_right == true)
-    {
-        this->m_posX += 0.01f;    
-        Animate("walk");
-    }
-    if (Inputs::m_left == true)
-    {
-        this->m_posX -= 0.01f;
-        Animate("walk");
-    }
-    if (Inputs::m_down == true)
-    {
-        this->m_posY += 0.01f; 
-        Animate("jump");
-    }
-    if (Inputs::m_up == true)
-    {
-        this->m_posY -= 0.01f;
-        Animate("jump"); 
-    }
+    // if (Inputs::m_right == true)
+    // {
+    //     this->m_posX += 0.01f;    
+    //     Animate("walk");
+    // }
+    // if (Inputs::m_left == true)
+    // {
+    //     this->m_posX -= 0.01f;
+    //     Animate("walk");
+    // }
+    // if (Inputs::m_down == true)
+    // {
+    //     this->m_posY += 0.01f; 
+    //     Animate("jump");
+    // }
+    // if (Inputs::m_up == true)
+    // {
+    //     this->m_posY -= 0.01f;
+    //     Animate("jump"); 
+    // }
 
         
   

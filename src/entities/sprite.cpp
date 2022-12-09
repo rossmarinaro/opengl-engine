@@ -3,12 +3,71 @@
 #include "../../headers/resources/spritesheets.h"
 
 
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb/stb_image.h"
+// #define STB_IMAGE_IMPLEMENTATION
+// #include "stb/stb_image.h"
 
 
 using namespace Entities;
 
+void Sprite::initRenderData()
+{
+    // configure VAO/VBO
+    unsigned int VBO;
+    float vertices[] = { 
+        // pos      // tex
+        0.0f, 1.0f, 0.0f, 1.0f,
+        1.0f, 0.0f, 1.0f, 0.0f,
+        0.0f, 0.0f, 0.0f, 0.0f, 
+    
+        0.0f, 1.0f, 0.0f, 1.0f,
+        1.0f, 1.0f, 1.0f, 1.0f,
+        1.0f, 0.0f, 1.0f, 0.0f
+    };
+
+    glGenVertexArrays(1, &this->quadVAO);
+    glGenBuffers(1, &VBO);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindVertexArray(this->quadVAO);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);  
+    glBindVertexArray(0);
+}
+
+void Sprite::DrawSprite (
+
+    Texture2D* &texture, 
+    glm::vec2 position, 
+    glm::vec2 size, 
+    float rotate, 
+    glm::vec3 color
+    
+)
+{
+    // prepare transformations
+    this->shader.Use();
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(position, 0.0f));  
+
+    model = glm::translate(model, glm::vec3(0.5f * size.x, 0.5f * size.y, 0.0f)); 
+    model = glm::rotate(model, glm::radians(rotate), glm::vec3(0.0f, 0.0f, 1.0f)); 
+    model = glm::translate(model, glm::vec3(-0.5f * size.x, -0.5f * size.y, 0.0f));
+
+    model = glm::scale(model, glm::vec3(size, 1.0f)); 
+  
+    this->shader.SetMatrix4("model", model, true);
+    this->shader.SetVector3f("spriteColor", color, true);
+  
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture->ID);// texture->Bind();
+
+    glBindVertexArray(this->quadVAO);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glBindVertexArray(0);
+}  
 
 void Sprite::Render()
 { 
@@ -24,26 +83,29 @@ void Sprite::Render()
             m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
         }
 
-        glPixelStorei(GL_UNPACK_ROW_LENGTH, m_width);
-        glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX);
-        glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
+        // glPixelStorei(GL_UNPACK_ROW_LENGTH, m_width);
+        // glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX); 
+        // glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
 
         glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
         
     //render open gl texture 
 
-        glBegin(GL_QUADS);
-            glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
-            glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY, 0);
-            glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY + m_srcHeight * m_scaleY, 0);
-            glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
-        glEnd();
+        // glBegin(GL_QUADS);
+        //     glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
+        //     glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY, 0);
+        //     glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY + m_srcHeight * m_scaleY, 0);
+        //     glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
+        // glEnd();
 
-        glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
-        glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
-        glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
+        // glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+        // glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
+        // glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
         
-        glGenerateMipmap(GL_TEXTURE_2D);
+        glGenerateMipmap(GL_TEXTURE_2D);     
+        
+        
+
     }
 
 }
@@ -52,97 +114,100 @@ void Sprite::Render()
 //-----------------------------------------------------------
 
 
-Sprite::Sprite(float x, float y, const char* key[2])
+Sprite::Sprite(/* float x, float y, const char* key[2] */Shader &shader)
 {
 
-    unsigned int id = m_id;
+    this->shader = shader;
+    this->initRenderData();
+
+    // unsigned int id = m_id;
     
-    m_id = id;
+    // m_id = id;
 
-    glGenTextures(1, &m_id);
+    // glGenTextures(1, &m_id);
 
-    glBindTexture(GL_TEXTURE_2D, m_id);
+    // glBindTexture(GL_TEXTURE_2D, m_id);
 
-    int ok, w, h, channels;
+    // int ok, w, h, channels;
 
-    ok = stbi_info(key[1], &w, &h, &channels);
+    // ok = stbi_info(key[1], &w, &h, &channels);
 
-    m_width = w,
-    m_height = h;
+    // m_width = w,
+    // m_height = h;
 
-    m_renderMode = GL_RGB;
+    // m_renderMode = GL_RGB;
     
-    if (channels == 4) 
-    { 
-        m_renderMode = GL_RGBA; 
-        Log::write("rgba enabled"); 
-    }
+    // if (channels == 4) 
+    // { 
+    //     m_renderMode = GL_RGBA; 
+    //     Log::write("rgba enabled"); 
+    // }
 
 
-    //---------------- set the texture wrapping parameters
+    // //---------------- set the texture wrapping parameters
 
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    //  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    //  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-    // //--------------- set texture filtering parameters
+    // // //--------------- set texture filtering parameters
 
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    // // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-    const char* spritesheet = Assets::Spritesheets::GetResource(key[0]); 
+    // const char* spritesheet = Assets::Spritesheets::GetResource(key[0]); 
 
-    if (spritesheet != 0) //if spritesheet
-    {
-        std::ifstream data(spritesheet);
-        m_resourceData = json::parse(data);
-        m_frames = m_resourceData["frames"].size() - 1;
-        m_currentFrame = 0;
-        m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
-        m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
-        m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
-        m_isSpritesheet = true;
-    }  
-    else
-    {
-        m_currentFrameWidth = m_width; 
-        m_currentFrameHeight = m_height;
-        m_currentFrameX = 0;
-        m_currentFrameY = 0; 
-    }
+    // if (spritesheet != 0) //if spritesheet
+    // {
+    //     std::ifstream data(spritesheet);
+    //     m_resourceData = json::parse(data);
+    //     m_frames = m_resourceData["frames"].size() - 1;
+    //     m_currentFrame = 0;
+    //     m_currentFrameY = m_resourceData["frames"][m_currentFrame]["y"];
+    //     m_currentFrameWidth = m_resourceData["frames"][m_currentFrame]["w"];
+    //     m_currentFrameHeight = m_resourceData["frames"][m_currentFrame]["h"]; 
+    //     m_isSpritesheet = true;
+    // }  
+    // else
+    // {
+    //     m_currentFrameWidth = m_width; 
+    //     m_currentFrameHeight = m_height;
+    //     m_currentFrameX = 0;
+    //     m_currentFrameY = 0; 
+    // }
 
-    m_image = stbi_load(key[1], &m_width, &m_height, &channels, 0);  
+    // m_image = stbi_load(key[1], &m_width, &m_height, &channels, 0);  
 
-    if (!m_image) 
-        Log::write("Error loading sprite."); 
+    // if (!m_image) 
+    //     Log::write("Error loading sprite."); 
         
-    else 
-    { 
+    // else 
+    // { 
 
-    //Get image dimensions / position
+    // //Get image dimensions / position
 
-        SetPosition(-0.5, -0.5);
+    //     SetPosition(-0.5, -0.5);
  
-        m_isLoaded = true;
+    //     m_isLoaded = true;
        
-        Log::write("Sprite instantiated");
+    //     Log::write("Sprite instantiated");
 
-    }
+    // }
 
 }
 
 Sprite::~Sprite()
 {
-
-    stbi_image_free(m_image); 
+    glDeleteVertexArrays(1, &this->quadVAO);
+    //stbi_image_free(m_image); 
     Log::write("Sprite Destroyed");
 
 }
@@ -163,3 +228,20 @@ if (currTime - prevTime >= 1/ 60)
 
 
  */
+
+
+// class SpriteRenderer
+// {
+//     public:
+//         SpriteRenderer(Shader &shader);
+//         ~SpriteRenderer();
+
+//         void DrawSprite(Texture2D &texture, glm::vec2 position, 
+//             glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, 
+//             glm::vec3 color = glm::vec3(1.0f));
+//     private:
+//         Shader       shader; 
+//         unsigned int quadVAO;
+
+//         void initRenderData();
+// };

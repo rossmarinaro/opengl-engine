@@ -1,24 +1,120 @@
 window initialized
-Time stamp: Mon Nov 28 15:44:07 2022
+Time stamp: Fri Dec 09 17:17:08 2022
 
 4.3.0 - Build 20.19.15.5126
-Time stamp: Mon Nov 28 15:44:08 2022
+Time stamp: Fri Dec 09 17:17:08 2022
 
-rgba enabled
-Time stamp: Mon Nov 28 15:44:08 2022
+shader deleted
+Time stamp: Fri Dec 09 17:17:13 2022
 
-Sprite instantiated
-Time stamp: Mon Nov 28 15:44:08 2022
+shader deleted
+Time stamp: Fri Dec 09 17:17:13 2022
 
-rgba enabled
-Time stamp: Mon Nov 28 15:44:08 2022
+window initialized
+Time stamp: Fri Dec 09 18:24:37 2022
 
-Sprite instantiated
-Time stamp: Mon Nov 28 15:44:08 2022
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:24:38 2022
 
-Sprite Destroyed
-Time stamp: Mon Nov 28 15:45:32 2022
+shader deleted
+Time stamp: Fri Dec 09 18:24:43 2022
 
-Sprite Destroyed
-Time stamp: Mon Nov 28 15:45:32 2022
+shader deleted
+Time stamp: Fri Dec 09 18:24:43 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:26:18 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:26:19 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:26:38 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:26:38 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:32:22 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:32:22 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:32:28 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:32:28 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:33:01 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:33:01 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:34:04 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:34:04 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:35:26 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:35:26 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:35:30 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:35:30 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:35:57 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:35:57 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:36:00 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:36:00 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:40:56 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:40:56 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:41:00 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:41:00 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:47:40 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:47:40 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:47:45 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:47:45 2022
+
+window initialized
+Time stamp: Fri Dec 09 18:50:50 2022
+
+4.3.0 - Build 20.19.15.5126
+Time stamp: Fri Dec 09 18:50:50 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:51:58 2022
+
+shader deleted
+Time stamp: Fri Dec 09 18:51:58 2022
 

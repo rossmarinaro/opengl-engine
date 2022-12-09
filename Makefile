@@ -8,11 +8,10 @@ OBJS = \
 	src/main.cpp \
 	src/window.cpp \
 	src/inputs.cpp \
-	src/game.cpp \
-	src/entities/map.cpp \
 	src/entities/sprite.cpp \
-	src/entities/player.cpp 
-
+	src/resource.cpp \
+	src/texture.cpp \
+	src/game.cpp 
 
 
 #CC specifies which compiler we're using
@@ -26,6 +25,10 @@ OBJS = \
 # vendors/imgui/imgui_draw.cpp
 # vendors/imgui/imgui_impl_glfw.cpp
 # vendors/imgui/imgui_impl_opengl3.cpp
+
+# src/entities/map.cpp 
+# src/entities/sprite.cpp 
+# src/entities/player.cpp
 
 CC = g++ -std=c++17 #-D GLEW_STATIC
 
