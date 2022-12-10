@@ -37,16 +37,19 @@ void Sprite::initRenderData()
     glBindVertexArray(0);
 }
 
-void Sprite::DrawSprite (
+//------------------------------------------ render sprite
+
+void Sprite::Render (
 
     Texture2D* &texture, 
     glm::vec2 position, 
     glm::vec2 size, 
     float rotate, 
     glm::vec3 color
-    
+
 )
-{
+{ 
+    
     // prepare transformations
     this->shader.Use();
     glm::mat4 model = glm::mat4(1.0f);
@@ -62,51 +65,49 @@ void Sprite::DrawSprite (
     this->shader.SetVector3f("spriteColor", color, true);
   
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture->ID);// texture->Bind();
+    glBindTexture(GL_TEXTURE_2D, texture->ID);
 
     glBindVertexArray(this->quadVAO);
     glDrawArrays(GL_TRIANGLES, 0, 6);
     glBindVertexArray(0);
-}  
 
-void Sprite::Render()
-{ 
-    if (m_isLoaded)
-    {
+
+    // if (m_isLoaded)
+    // {
     
-        //animation iteration
+    //     //animation iteration
         
-        if (m_isSpritesheet == true) 
-        {
-            if (m_currentFrame > m_frames)
-                m_currentFrame = 0;
-            m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
-        }
+    //     if (m_isSpritesheet == true) 
+    //     {
+    //         if (m_currentFrame > m_frames)
+    //             m_currentFrame = 0;
+    //         m_currentFrameX = m_resourceData["frames"][m_currentFrame]["x"]; 
+    //     }
 
-        // glPixelStorei(GL_UNPACK_ROW_LENGTH, m_width);
-        // glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX); 
-        // glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
+    //     glPixelStorei(GL_UNPACK_ROW_LENGTH, m_width);
+    //     glPixelStorei(GL_UNPACK_SKIP_PIXELS, m_currentFrameX); 
+    //     glPixelStorei(GL_UNPACK_SKIP_ROWS, m_currentFrameY);
 
-        glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
+    //     glTexImage2D(GL_TEXTURE_2D, 0, m_renderMode, m_currentFrameWidth, m_currentFrameHeight, 0, m_renderMode, GL_UNSIGNED_BYTE, m_image);
         
-    //render open gl texture 
+    // //render open gl texture 
 
-        // glBegin(GL_QUADS);
-        //     glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
-        //     glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY, 0);
-        //     glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY + m_srcHeight * m_scaleY, 0);
-        //     glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
-        // glEnd();
+    //     glBegin(GL_QUADS);
+    //         glTexCoord2f(0, 1); glVertex3f(m_posX, m_posY, 0);
+    //         glTexCoord2f(1, 1); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY, 0);
+    //         glTexCoord2f(1, 0); glVertex3f(m_posX + m_srcWidth * m_scaleX, m_posY + m_srcHeight * m_scaleY, 0);
+    //         glTexCoord2f(0, 0); glVertex3f(m_posX, m_posY + m_srcHeight * m_scaleY, 0); 
+    //     glEnd();
 
-        // glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
-        // glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
-        // glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
+    //     glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+    //     glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
+    //     glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
         
-        glGenerateMipmap(GL_TEXTURE_2D);     
+    //     glGenerateMipmap(GL_TEXTURE_2D);     
         
         
 
-    }
+    // }
 
 }
 

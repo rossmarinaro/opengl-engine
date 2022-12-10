@@ -52,39 +52,21 @@ Game::Game()
     //map.push_back(m_mapMgr->m_tilesprites); 
 
 
-
-    //tmp
-
     ResourceManager::LoadShader("assets/glsl/projection/vert.shader", "assets/glsl/projection/frag.shader", nullptr, "sprite");
-    // configure shaders
-    glm::mat4 projection = glm::ortho(
-        0.0f, 
-        static_cast<float>(Window::width), 
-        static_cast<float>(Window::height), 
-        0.0f, 
-        -1.0f, 
-        1.0f
-    );
 
     shadeA = ResourceManager::GetShader("sprite");
     
     shadeA->Use(); 
     shadeA->SetInteger("image", 0, true);
 
-    shadeB = ResourceManager::GetShader("sprite");
+    //shadeB = ResourceManager::GetShader("sprite");
     
-    shadeB->SetMatrix4("projection", projection,false);
-    
-
-
     //set render-specific controls
-    renderable = new Sprite(*shadeA/* ResourceManager::GetShader("sprite") */);
+    renderable = new Sprite(*shadeA);
     // load textures
     ResourceManager::LoadTexture("assets/images/swanky_velvet.png", true, "swanky_velvet");
             
-   
     tex = ResourceManager::GetTexture("swanky_velvet");
-
 
 
 }
@@ -105,10 +87,9 @@ void Game::Update()
     // for (auto &ent : currentTextures)
     //     ent->Render();
 
-
-
-
-    renderable->DrawSprite(tex, glm::vec2(200.0f, 200.0f), glm::vec2(300.0f, 400.0f), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
+//    glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(Window::width), static_cast<float>(Window::height), 0.0f, -1.0f, 1.0f);
+//    shadeB->SetMatrix4("projection", projection,true);
+   renderable->Render(tex, glm::vec2(200.0f, 200.0f), glm::vec2(300.0f, 400.0f), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
 
 }
 

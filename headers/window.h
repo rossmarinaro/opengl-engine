@@ -25,13 +25,18 @@ class Window {
 
         static int InitializeWindow();
         static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+        static void updateProjectionMatrix();
+        
      
         Window& get()
         {
             return *this;
         }
 
-    
+    private:
+
+        static Shader* m_projMatShader;
+
 };
 
 #endif

@@ -7,6 +7,7 @@ OBJS = \
 	vendors/glad/src/glad.c \
 	src/main.cpp \
 	src/window.cpp \
+	src/shader.cpp \
 	src/inputs.cpp \
 	src/entities/sprite.cpp \
 	src/resource.cpp \

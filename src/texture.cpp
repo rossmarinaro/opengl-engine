@@ -39,9 +39,3 @@ void Texture2D::Generate(unsigned int width, unsigned int height, unsigned char*
     // unbind texture
     glBindTexture(GL_TEXTURE_2D, 0);
 }
-
-void Texture2D::Bind() const
-{
-    glBindTexture(GL_TEXTURE_2D, this->ID);
-    
-}

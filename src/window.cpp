@@ -11,7 +11,9 @@ bool isRunning = true,
      show_demo_window = true,
      show_another_window = false;
 
+Shader* projMatShader;
 GLFWwindow* Window::m_window; 
+
 int Window::width = 640, 
     Window::height = 640;
 //1280, 720; 
@@ -31,6 +33,13 @@ glm::vec4 clear_color;
 //      0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
 // };
 
+void Window::updateProjectionMatrix()
+{
+   projMatShader = ResourceManager::GetShader("sprite");
+   glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(Window::width), static_cast<float>(Window::height), 0.0f, -1.0f, 1.0f);
+   projMatShader->SetMatrix4("projection", projection);
+
+}
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------
@@ -54,7 +63,7 @@ void Window::framebuffer_size_callback(GLFWwindow* window, int width, int height
 
     transform[0] = 2.0f * Window::width;
     transform[5] = 2.0f * Window::height;
-
+updateProjectionMatrix();
 
    //shader->transform(transform);
 
@@ -318,6 +327,7 @@ int Window::InitializeWindow()
         //CloseGui();
 
         delete game;
+        delete projMatShader;
         delete Window::m_window;   
         
         Log::write("window closed");
