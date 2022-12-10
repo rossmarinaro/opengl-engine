@@ -7,7 +7,7 @@
 
         // 2. compile shaders
 
-        unsigned int vertex, fragment, gShader;
+        unsigned int vertex, fragment, geometry;
 
         // vertex shader
 
@@ -24,13 +24,14 @@
         checkCompileErrors(fragment, "FRAGMENT");
 
 
-    // if geometry shader source code is given, also compile geometry shader
+        // if geometry shader 
+
         if (geomPath != nullptr)
         {
-            gShader = glCreateShader(GL_GEOMETRY_SHADER);
-            glShaderSource(gShader, 1, &geomPath, NULL);
-            glCompileShader(gShader);
-            checkCompileErrors(gShader, "GEOMETRY");
+            geometry = glCreateShader(GL_GEOMETRY_SHADER);
+            glShaderSource(geometry, 1, &geomPath, NULL);
+            glCompileShader(geometry);
+            checkCompileErrors(geometry, "GEOMETRY");
         }
 
         // shader Program
@@ -40,7 +41,7 @@
         glAttachShader(this->ID, fragment);
 
         if (geomPath != nullptr)
-            glAttachShader(this->ID, gShader);
+            glAttachShader(this->ID, geometry);
 
         glLinkProgram(this->ID);
         checkCompileErrors(this->ID, "PROGRAM");
@@ -68,12 +69,13 @@
         this->Use();         
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
-        // delete the shaders as they're linked into our program now and no longer necessary
+        // delete the shaders
+
         glDeleteShader(vertex);
         glDeleteShader(fragment);
 
         if (geomPath != nullptr)
-            glDeleteShader(gShader);
+            glDeleteShader(geometry);
     }
     
     Shader::~Shader()
@@ -84,13 +86,15 @@
         Log::write("shader deleted");
     }
 
-    // activate the shader
-    // ------------------------------------------------------------------------
+    // ------------------------------------------------------------------------ activate 
+
     Shader& Shader::Use() 
     { 
         glUseProgram(this->ID); 
         return *this;
     }
+
+    //-------------------------------------------------------------------------- transform
 
     void Shader::transform(GLfloat transformation[])
     {

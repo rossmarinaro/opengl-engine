@@ -33,9 +33,6 @@ class Window {
             return *this;
         }
 
-    private:
-
-        static Shader* m_projMatShader;
 
 };
 

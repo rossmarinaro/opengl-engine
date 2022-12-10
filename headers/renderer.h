@@ -1,4 +1,8 @@
 
+#ifndef RENDERER_H
+#define RENDERER_H
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,6 +18,6 @@
 // #include <SDL_opengles2.h>
 // #else
 // #include <SDL_opengl.h>
-// #endif
+#endif
 
 

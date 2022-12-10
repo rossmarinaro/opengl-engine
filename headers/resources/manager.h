@@ -22,6 +22,8 @@ public:
     // resource storage
     static std::map<std::string, Shader*> Shaders;
     static std::map<std::string, Texture2D*> Textures;
+    static std::map<std::string, std::string> m_assets;
+
     // loads (and generates) a shader program from file loading vertex, fragment (and geometry) shader's source code. If gShaderFile is not nullptr, it also loads a geometry shader
     static Shader* LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, std::string name);
     // retrieves a stored sader
@@ -32,9 +34,17 @@ public:
     static Texture2D* GetTexture(std::string name);
     // properly de-allocates all loaded resources
     static void Clear();
+
+    static std::string GetAssetByKey(std::string name);
+
+   void InitializeResources();
+
+   ResourceManager(){};
+
+
 private:
     // private constructor, that is we do not want any actual resource manager objects. Its members and functions should be publicly available (static).
-    ResourceManager() { }
+ 
     // loads and generates a shader from file
     static Shader* loadShaderFromFile(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile = nullptr);
     // loads a single texture from file

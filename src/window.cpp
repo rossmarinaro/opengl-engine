@@ -6,32 +6,25 @@
 #include <stdlib.h>
 #include "../headers/shader.h"
 
+
+
+Shader* projMatShader;
+GLFWwindow* Window::m_window; 
+
+int Window::width = 1280, 
+    Window::height = 720;
+
 float highDPIscaleFactor = 1.0;
 bool isRunning = true,
      show_demo_window = true,
      show_another_window = false;
 
-Shader* projMatShader;
-GLFWwindow* Window::m_window; 
-
-int Window::width = 640, 
-    Window::height = 640;
-//1280, 720; 
 
 //ImGuiIO io;
 // ImVec4 clear_color;
 glm::vec4 clear_color;
 
-
-// static const GLchar* vertShader_transform = "assets/glsl/transform/vert.shader";
-// static const GLchar* fragShader_transform = "assets/glsl/transform/frag.shader";
-
-// static GLfloat vertices[] = {
-// /*   Positions          Colors */
-//      0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
-//     -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-//      0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
-// };
+//------------------------------------------ update projection matrix
 
 void Window::updateProjectionMatrix()
 {
@@ -63,7 +56,7 @@ void Window::framebuffer_size_callback(GLFWwindow* window, int width, int height
 
     transform[0] = 2.0f * Window::width;
     transform[5] = 2.0f * Window::height;
-updateProjectionMatrix();
+
 
    //shader->transform(transform);
 
@@ -282,12 +275,11 @@ int Window::InitializeWindow()
             glEnable(GL_BLEND);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-            //framebuffer_size_callback(window, WIDTH, HEIGHT);
 
         //------------Init game
 
-            Game* game = new Game();      glm::mat4 projection = glm::ortho(0.0f, 800.0f, 600.0f, 0.0f, -1.0f, 1.0f); 
-
+            Game* game = new Game();      
+            
         //-------- Init GUI
 
             //LaunchGui();
@@ -311,8 +303,7 @@ int Window::InitializeWindow()
                 clear_color = glm::vec4(0.2f, 0.3f, 0.3f, 1.0f);
 
                 glViewport(0, 0, Window::width, Window::height);
-                glMatrixMode(GL_PROJECTION);
-                glLoadIdentity(); 
+                updateProjectionMatrix();
 
                 glfwSetFramebufferSizeCallback(Window::m_window, framebuffer_size_callback);   
                 glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);

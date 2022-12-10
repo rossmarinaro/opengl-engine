@@ -41,7 +41,6 @@ void Sprite::initRenderData()
 
 void Sprite::Render (
 
-    Texture2D* &texture, 
     glm::vec2 position, 
     glm::vec2 size, 
     float rotate, 
@@ -51,21 +50,26 @@ void Sprite::Render (
 { 
     
     // prepare transformations
-    this->shader.Use();
+
+    m_shader->Use();
+
     glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate(model, glm::vec3(position, 0.0f));  
+    model = glm::translate(model, glm::vec3(position/* m_position */, 0.0f));  
 
     model = glm::translate(model, glm::vec3(0.5f * size.x, 0.5f * size.y, 0.0f)); 
-    model = glm::rotate(model, glm::radians(rotate), glm::vec3(0.0f, 0.0f, 1.0f)); 
+    
+    if (rotate > 0)
+        model = glm::rotate(model, glm::radians(rotate), glm::vec3(0.0f, 0.0f, 1.0f)); 
+    
     model = glm::translate(model, glm::vec3(-0.5f * size.x, -0.5f * size.y, 0.0f));
 
     model = glm::scale(model, glm::vec3(size, 1.0f)); 
   
-    this->shader.SetMatrix4("model", model, true);
-    this->shader.SetVector3f("spriteColor", color, true);
+    m_shader->SetMatrix4("model", model);
+    m_shader->SetVector3f("spriteColor", color);
   
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture->ID);
+    glBindTexture(GL_TEXTURE_2D, m_texture->ID);
 
     glBindVertexArray(this->quadVAO);
     glDrawArrays(GL_TRIANGLES, 0, 6);
@@ -115,11 +119,25 @@ void Sprite::Render (
 //-----------------------------------------------------------
 
 
-Sprite::Sprite(/* float x, float y, const char* key[2] */Shader &shader)
+Sprite::Sprite(glm::vec2 position, std::string name)
 {
+    this->m_position = position;
 
-    this->shader = shader;
-    this->initRenderData();
+    const char* key = ResourceManager::GetAssetByKey(name).c_str();
+
+    ResourceManager::LoadShader("assets/glsl/projection/vert.shader", "assets/glsl/projection/frag.shader", nullptr, "sprite");
+
+    m_shader = ResourceManager::GetShader("sprite");
+    m_shader->Use(); 
+    m_shader->SetInteger("image", 0, true);
+
+    if (key != "NOT FOUND")
+    {
+        ResourceManager::LoadTexture(key, true, name);  
+        m_texture = ResourceManager::GetTexture(name);
+
+        this->initRenderData();
+    }
 
     // unsigned int id = m_id;
     
@@ -207,42 +225,12 @@ Sprite::Sprite(/* float x, float y, const char* key[2] */Shader &shader)
 
 Sprite::~Sprite()
 {
+
+    delete m_shader;
+    delete m_texture;
+
     glDeleteVertexArrays(1, &this->quadVAO);
     //stbi_image_free(m_image); 
     Log::write("Sprite Destroyed");
 
 }
-
-
-/* 
-timer:
-
-double prevTime = glfwGetTime();
-
-while...
-double currTime = glfwGetTime();
-if (currTime - prevTime >= 1/ 60)
-{
-    do something...
-    prevTime = currTime
-}
-
-
- */
-
-
-// class SpriteRenderer
-// {
-//     public:
-//         SpriteRenderer(Shader &shader);
-//         ~SpriteRenderer();
-
-//         void DrawSprite(Texture2D &texture, glm::vec2 position, 
-//             glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, 
-//             glm::vec3 color = glm::vec3(1.0f));
-//     private:
-//         Shader       shader; 
-//         unsigned int quadVAO;
-
-//         void initRenderData();
-// };

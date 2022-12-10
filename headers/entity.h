@@ -68,21 +68,22 @@ namespace Entities {
 			}
 
 			void Render (
-				Texture2D* &texture, 
+				/* Texture2D* &texture,  */
 				glm::vec2 position, 
 				glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, 
 				glm::vec3 color = glm::vec3(1.0f)
 			);
-
-
-			Sprite(/* float x, float y, const char* key[2] */Shader &shader);
+    
+			glm::vec2 m_position;
+		    Sprite(glm::vec2 position, std::string name);
 		   ~Sprite();
 
 		private:
 
-			int m_renderMode;
+			Texture2D* m_texture;
+      		Shader* m_shader; 
 
-      		Shader shader; 
+			int m_renderMode;
         	unsigned int quadVAO;
         	void initRenderData();
 		

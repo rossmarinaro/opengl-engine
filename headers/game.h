@@ -1,10 +1,11 @@
 #pragma once
 
-#include "./resources/assets.h"
 #include "./renderer.h"
-#include "./tilemap.h"
+//#include "./tilemap.h"
 #include "./entity.h"
 
+#include "../headers/resources/manager.h"
+#include "../headers/texture.h"
 
 using namespace Entities;
 
@@ -14,14 +15,11 @@ class Game {
 
         static const bool m_gameState = true;
         const char* m_currentStage;
-     
-        Game* s_instance;
-   
-
+    
     public: 
 
-        AssetManager* m_assMgr;
-        MapManager* m_mapMgr;
+        ResourceManager m_resMgr;
+       // MapManager* m_mapMgr;
 
         static Inputs* inputs;
 

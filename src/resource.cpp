@@ -13,6 +13,8 @@
 // Instantiate static variables
 std::map<std::string, Texture2D*> ResourceManager::Textures;
 std::map<std::string, Shader*> ResourceManager::Shaders;
+std::map<std::string, std::string> ResourceManager::m_assets;
+
 static std::vector<Shader*> shaderVector;
 static std::vector<Texture2D*> textureVector;
 
@@ -23,6 +25,30 @@ static GLfloat vertices[] = {
     -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
      0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f
 };
+
+void ResourceManager::InitializeResources()
+{
+
+    m_assets.insert({
+        { "menu", "assets/images/menu.png" },
+        { "pastaboss", "assets/images/pb.png" },
+        { "swanky velvet", "assets/images/swanky_velvet.png" },
+        { "map", "assets/images/map.png" },
+        { "brick", "assets/images/brick.png" }
+    });
+
+    Log::write("resources initialized");
+}
+
+std::string ResourceManager::GetAssetByKey(std::string name)
+{
+    std::map<std::string, std::string>::iterator iterator;
+
+    iterator = m_assets.find(name);
+
+    return iterator != m_assets.end() ? 
+           iterator->second : "NOT FOUND";      
+}
 
 Shader* ResourceManager::LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, std::string name)
 {
