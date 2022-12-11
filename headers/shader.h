@@ -30,10 +30,10 @@ public:
     void    SetMatrix4  (const char *name, const glm::mat4 &matrix, bool useShader = false);
 
     // --------------------------------------------------- constructor generates the shader on the fly 
-
-    Shader() = default;
-    Shader(GLfloat vertices[], const char* vertexPath, const char* fragmentPath, const char* geomPath = nullptr);
-    ~Shader();
+void Init(GLfloat vertices[], const char* vertexPath, const char* fragmentPath, const char* geomPath = nullptr);
+  //  Shader() = default;
+    Shader(/* GLfloat vertices[], const char* vertexPath, const char* fragmentPath, const char* geomPath = nullptr */){};
+    //~Shader();
 
     // --------------------------------------------------- activate the shader
 
@@ -41,13 +41,15 @@ public:
 
     void transform(GLfloat transformation[]);
 
-
-private:
-
     unsigned int ID;
-    GLint transform_location;
-    GLuint VBO;
+        GLuint VBO;
     GLuint VAO;
+private:
+            
+   // unsigned int ID;
+    GLint transform_location;
+    // GLuint VBO;
+    // GLuint VAO;
 
     // --------------------------------------------------- check compilation/linking errors.
 

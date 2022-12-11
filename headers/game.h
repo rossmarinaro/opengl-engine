@@ -18,7 +18,6 @@ class Game {
     
     public: 
 
-        ResourceManager m_resMgr;
        // MapManager* m_mapMgr;
 
         static Inputs* inputs;

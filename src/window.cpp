@@ -7,8 +7,6 @@
 #include "../headers/shader.h"
 
 
-
-Shader* projMatShader;
 GLFWwindow* Window::m_window; 
 
 int Window::width = 1280, 
@@ -28,9 +26,8 @@ glm::vec4 clear_color;
 
 void Window::updateProjectionMatrix()
 {
-   projMatShader = ResourceManager::GetShader("sprite");
    glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(Window::width), static_cast<float>(Window::height), 0.0f, -1.0f, 1.0f);
-   projMatShader->SetMatrix4("projection", projection);
+   ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
 
 }
 
@@ -274,11 +271,12 @@ int Window::InitializeWindow()
             glEnable(GL_TEXTURE_2D);
             glEnable(GL_BLEND);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
+            
+            ResourceManager::LoadShader("assets/glsl/projection/vert.shader", "assets/glsl/projection/frag.shader", nullptr, "sprite");
 
         //------------Init game
-
-            Game* game = new Game();      
+            
+            Game game;      
             
         //-------- Init GUI
 
@@ -297,7 +295,7 @@ int Window::InitializeWindow()
                 glClear(GL_COLOR_BUFFER_BIT);
         
                 //GuiPreUpdate();
-                game->Update();
+                game.Update();
                 //RenderGui();
             
                 clear_color = glm::vec4(0.2f, 0.3f, 0.3f, 1.0f);
@@ -317,8 +315,6 @@ int Window::InitializeWindow()
 
         //CloseGui();
 
-        delete game;
-        delete projMatShader;
         delete Window::m_window;   
         
         Log::write("window closed");

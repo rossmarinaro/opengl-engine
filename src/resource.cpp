@@ -11,12 +11,12 @@
 #include "stb/stb_image.h"
 
 // Instantiate static variables
-std::map<std::string, Texture2D*> ResourceManager::Textures;
-std::map<std::string, Shader*> ResourceManager::Shaders;
+std::map<std::string, Texture2D> ResourceManager::Textures;
+std::map<std::string, Shader> ResourceManager::Shaders;
 std::map<std::string, std::string> ResourceManager::m_assets;
 
-static std::vector<Shader*> shaderVector;
-static std::vector<Texture2D*> textureVector;
+static std::vector<Shader> shaderVector;
+static std::vector<Texture2D> textureVector;
 
 
 static GLfloat vertices[] = {
@@ -37,6 +37,7 @@ void ResourceManager::InitializeResources()
         { "brick", "assets/images/brick.png" }
     });
 
+
     Log::write("resources initialized");
 }
 
@@ -50,39 +51,37 @@ std::string ResourceManager::GetAssetByKey(std::string name)
            iterator->second : "NOT FOUND";      
 }
 
-Shader* ResourceManager::LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, std::string name)
+void ResourceManager::Clear()
+{
+    
+    for (auto shader : Shaders)
+    {
+        glDeleteVertexArrays(1, &shader.second.VAO);
+        glDeleteBuffers(1, &shader.second.VBO);
+        glDeleteProgram(shader.second.ID);
+    }
+    for (auto tex : Textures)
+    {
+        glDeleteTextures(1, &tex.second.ID);   
+        glBindTexture(GL_TEXTURE_2D, 0); 
+    }
+
+}
+
+//------------------------------------- shaders
+
+Shader ResourceManager::LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, std::string name)
 {
     Shaders[name] = loadShaderFromFile(vShaderFile, fShaderFile, gShaderFile);
     return Shaders[name];
 }
 
-Shader* ResourceManager::GetShader(std::string name)
+Shader& ResourceManager::GetShader(std::string name)
 {
     return Shaders[name];
 }
 
-Texture2D* ResourceManager::LoadTexture(const char *file, bool alpha, std::string name)
-{
-    Textures[name] = loadTextureFromFile(file, alpha);
-    return Textures[name];
-}
-
-Texture2D* ResourceManager::GetTexture(std::string name)
-{
-    return Textures[name];
-}
-
-void ResourceManager::Clear()
-{
-    // delete all shaders	
-    for (auto &shader : shaderVector)
-        delete shader;
-    // delete all textures
-    for (auto &texture : textureVector)
-        delete texture;
-}
-
-Shader* ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile)
+Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile)
 {
     // 1. retrieve the vertex/fragment source code from filePath
 
@@ -136,36 +135,46 @@ Shader* ResourceManager::loadShaderFromFile(const char *vShaderFile, const char 
 
     // 2. now create shader object from source code
 
-    Shader* shader = new Shader(vertices, vShaderCode, fShaderCode, gShaderFile != nullptr ? gShaderCode : nullptr);
+    Shader shader; 
 
-    shaderVector.push_back(shader);
+    shader.Init(vertices, vShaderCode, fShaderCode, gShaderFile != nullptr ? gShaderCode : nullptr);
 
     return shader; 
     
 }
 
-Texture2D* ResourceManager::loadTextureFromFile(const char *file, bool alpha)
+//------------------------------- textures
+
+Texture2D ResourceManager::LoadTexture(const char* file, std::string name)
 {
-    //create texture object
+    Textures[name] = loadTextureFromFile(file);
+    return Textures[name];
+}
 
-    Texture2D* texture = new Texture2D;
+Texture2D& ResourceManager::GetTexture(std::string name)
+{
+    return Textures[name];
+}
 
-    if (alpha)
-    {
-        texture->Internal_Format = GL_RGBA;
-        texture->Image_Format = GL_RGBA;
-    }
-    // load image
+Texture2D ResourceManager::loadTextureFromFile(const char* file)
+{
+    //create texture object / load image
+
+    Texture2D texture;
+
     int width, height, nrChannels;
     unsigned char* data = stbi_load(file, &width, &height, &nrChannels, 0);
 
-    // now generate texture
-    texture->Generate(width, height, data);
+    if (nrChannels == 4)
+    {
+        texture.Internal_Format = GL_RGBA;
+        texture.Image_Format = GL_RGBA;
+    }
+    
+    texture.Generate(width, height, data);
 
-    // and finally free image data
     stbi_image_free(data);
-
-    textureVector.push_back(texture);
 
     return texture;
 }
+

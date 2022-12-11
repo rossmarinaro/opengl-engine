@@ -1,9 +1,8 @@
 #include "../headers/shader.h"
 
 
-    Shader::Shader(GLfloat vertices[], const char* vertexPath, const char* fragmentPath, const char* geomPath)
+    void Shader::Init(GLfloat vertices[], const char* vertexPath, const char* fragmentPath, const char* geomPath)
     {
-
 
         // 2. compile shaders
 
@@ -78,13 +77,12 @@
             glDeleteShader(geometry);
     }
     
-    Shader::~Shader()
-    {
-        glDeleteVertexArrays(1, &VAO);
-        glDeleteBuffers(1, &VBO);
-        glDeleteProgram(this->ID);
-        Log::write("shader deleted");
-    }
+    // Shader::~Shader()
+    // {
+    //     glDeleteVertexArrays(1, &VAO);
+    //     glDeleteBuffers(1, &VBO);
+    //     glDeleteProgram(this->ID);
+    // }
 
     // ------------------------------------------------------------------------ activate 
 

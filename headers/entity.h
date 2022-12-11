@@ -11,6 +11,7 @@
 #include "../vendors/nlohmann/json.hpp" 
 
 #include <iostream>
+#include <glm/gtc/matrix_transform.hpp>
 
 using string = std::string;
 using json = nlohmann::json;
@@ -68,7 +69,6 @@ namespace Entities {
 			}
 
 			void Render (
-				/* Texture2D* &texture,  */
 				glm::vec2 position, 
 				glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, 
 				glm::vec3 color = glm::vec3(1.0f)
@@ -80,8 +80,8 @@ namespace Entities {
 
 		private:
 
-			Texture2D* m_texture;
-      		Shader* m_shader; 
+			Texture2D m_texture;
+      		Shader m_shader; 
 
 			int m_renderMode;
         	unsigned int quadVAO;
